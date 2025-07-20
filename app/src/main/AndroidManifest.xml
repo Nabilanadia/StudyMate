@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.studymate">
+
+    <!-- 🔐 Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <!-- 📱 Hardware Features -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="StudyMate"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudyMate">
+
+        <!-- 🔑 Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBQnKJMR-_KXCBuqRzBotifgxTxAZmp74c" />
+
+        <!-- 🚀 Launcher Activity: MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ Auth & Navigation Activities -->
+        <activity android:name=".LoginActivity" android:exported="true" />
+        <activity android:name=".RegisterActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".Homepage" android:exported="true" />
+
+        <!-- 🌍 Features -->
+        <activity android:name=".MapActivity" android:exported="true" />
+        <activity android:name=".CameraActivity" android:exported="true" />
+        <activity android:name=".MyNotesActivity" android:exported="true" />
+        <activity android:name=".ReminderActivity" android:exported="true" />
+
+        <!-- 🔔 BroadcastReceiver for scheduled reminders -->
+        <receiver android:name=".AlarmReceiver"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EAF8"
+    android:padding="16dp"
+    tools:context=".ReminderActivity">
+
+    <!-- 🔙 Back Button -->
+    <Button
+        android:id="@+id/backToMainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="#DDDDDD"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- 📝 Page Title -->
+    <TextView
+        android:id="@+id/reminderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Study Reminders"
+        android:textColor="#333333"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="16dp"
+        android:layout_alignTop="@id/backToMainBtn"
+        android:layout_toEndOf="@id/backToMainBtn"
+        android:layout_marginTop="10dp" />
+
+    <!-- ℹ️ Instruction Text -->
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\uD83D\uDCCC Tap to edit, long-press to delete a reminder."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_below="@id/backToMainBtn"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+    <!-- 📋 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reminderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/hintText"
+        android:layout_above="@+id/addReminderBtn"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/item_reminder" />
+
+    <!-- ➕ Floating Add Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addReminderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Reminder"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FFFFFF"
+        app:backgroundTint="#4CAF50" />
+
+</RelativeLayout>

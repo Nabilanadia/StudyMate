@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageView" type="id" />
+    <item name="cameraBtn" type="id" />
+    <item name="deleteBtn" type="id" />
+    <item name="viewNotesBtn" type="id" />
+    <item name="saveNoteBtn" type="id" />
+    <item name="locationText" type="id" />
+    <item name="fetchLocationBtn" type="id" />
+    <item name="pickDateBtn" type="id" />
+    <item name="noteTitleInput" type="id" />
+    <item name="takePhotoBtn" type="id" />
+    <item name="imagePreview" type="id" />
+    <item name="titleInput" type="id" />
+    <item name="dateInput" type="id" />
+    <item name="tagSpinner" type="id" />
+</resources>

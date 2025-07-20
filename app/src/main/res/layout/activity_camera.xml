@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="#D6EAF8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 🔙 Back Button -->
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:backgroundTint="#DDDDDD"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 📸 Step 1: Capture Photo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📸 Step 1: Capture Photo"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:contentDescription="Photo Preview" />
+
+        <Button
+            android:id="@+id/takePhotoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📷 Take Photo"
+            android:textAllCaps="false"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 📝 Step 2: Add Note Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 Step 2: Add Note Title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/noteTitleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your note title here"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🕒 Step 3: Select Date and Time -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🕒 Step 3: Select Date and Time"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/pickDateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Pick Date &amp; Time"
+            android:textAllCaps="false"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/selectedDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 No date selected"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 📍 Step 4: Fetch Location -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Step 4: Fetch Location"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/fetchLocationBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Fetch Current Location"
+            android:textAllCaps="false"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 No location selected"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 💾 Step 5: Save -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Step 5: Save or View Notes"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/saveNoteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Save Note"
+            android:textAllCaps="false"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/viewNotesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📑 View My Notes"
+            android:textAllCaps="false"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

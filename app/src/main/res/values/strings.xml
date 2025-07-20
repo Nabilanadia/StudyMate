@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StudyMate</string>
+    <string-array name="tags_array">
+        <item>Assignment</item>
+        <item>Revision</item>
+        <item>Exam</item>
+        <item>Presentation</item>
+    </string-array>
+</resources>

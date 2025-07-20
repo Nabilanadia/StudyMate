@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EAF8"
+    tools:context=".ProfileActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewWelcome" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME!"
+        android:textSize="28sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Display Email -->
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Email Here"
+        android:textSize="18sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Edit Name -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Enter your name"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/buttonEdit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="EDIT PROFILE"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:onClick="enableEdit"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="SAVE"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:onClick="saveProfile"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/buttonEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <!-- Back Button (replaces Logout) -->
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="BACK"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:onClick="goBack"
+        app:layout_constraintTop_toBottomOf="@id/buttonSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

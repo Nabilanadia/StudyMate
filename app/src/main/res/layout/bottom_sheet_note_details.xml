@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/noteBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:paddingBottom="4dp" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/noteDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📅 Date"
+        android:textSize="14sp"
+        android:textColor="#444444"
+        android:paddingBottom="4dp" />
+
+    <!-- Location Name -->
+    <TextView
+        android:id="@+id/noteLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📍 Location Name"
+        android:textSize="14sp"
+        android:textColor="#444444"
+        android:paddingBottom="8dp" />
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/noteImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        android:contentDescription="Note Image" />
+</LinearLayout>
